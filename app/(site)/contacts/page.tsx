@@ -2,6 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
+import { Contact } from "@/libs/types/contact";
 
 export default function ContactsPage() {
   const filePath = path.join(process.cwd(), "data", "en", "contacts.json");
@@ -13,7 +14,7 @@ export default function ContactsPage() {
       <div className="max-w-md w-full p-4">
         {/* ICONS (Server Rendered) */}
         <div className="flex justify-center space-x-6 mb-8">
-          {contacts.map((item) => (
+          {contacts.map((item: Contact) => (
             <a
               key={item.label}
               href={item.url}
