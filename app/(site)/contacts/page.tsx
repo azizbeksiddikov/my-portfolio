@@ -1,29 +1,28 @@
+import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
 import fs from "fs";
 import path from "path";
-import Image from "next/image";
-import ContactForm from "@/components/ContactForm";
 
 export default function ContactsPage() {
-  // 1. Read contacts JSON
   const filePath = path.join(process.cwd(), "data", "en", "contacts.json");
   const fileData = fs.readFileSync(filePath, "utf-8");
   const { contacts } = JSON.parse(fileData);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="max-w-lg w-full p-4 sm:p-8 bg-gray-50">
-        {/* Icon Row */}
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 text-gray-800">
+      <div className="max-w-md w-full p-4">
+        {/* ICONS (Server Rendered) */}
         <div className="flex justify-center space-x-6 mb-8">
-          {contacts.map((contact: any) => (
+          {contacts.map((item) => (
             <a
-              key={contact.label}
-              href={contact.url}
+              key={item.label}
+              href={item.url}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                src={contact.icon}
-                alt={contact.label}
+                src={item.icon}
+                alt={item.label}
                 width={32}
                 height={32}
                 className="hover:opacity-80"
@@ -32,7 +31,7 @@ export default function ContactsPage() {
           ))}
         </div>
 
-        {/* Contact Form */}
+        {/* FORM (Client Rendered) */}
         <ContactForm />
       </div>
     </div>

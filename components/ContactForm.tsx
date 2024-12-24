@@ -10,7 +10,7 @@ export default function ContactForm() {
   });
   const [status, setStatus] = useState("");
 
-  // Update input values in state
+  // Update form fields in state
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -18,27 +18,26 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission
+  // Submit to Next.js API route
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
 
     try {
-      // Example POST to /api/send-message
-      const res = await fetch("/api/send-message", {
+      const response = await fetch("/api/send-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (res.ok) {
-        setStatus("Message sent!");
+      if (response.ok) {
+        setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to send. Please try again.");
+        setStatus("Error sending message. Please try again.");
       }
-    } catch (err) {
-      console.error("Error sending message:", err);
+    } catch (error) {
+      console.error("Error:", error);
       setStatus("An error occurred. Please try again.");
     }
   };
@@ -50,7 +49,7 @@ export default function ContactForm() {
         type="text"
         name="name"
         placeholder="Your Name"
-        className="w-full px-4 py-2 border rounded"
+        className="w-full px-3 py-2 border rounded"
         value={formData.name}
         onChange={handleChange}
         required
@@ -61,7 +60,7 @@ export default function ContactForm() {
         type="email"
         name="email"
         placeholder="Your Email"
-        className="w-full px-4 py-2 border rounded"
+        className="w-full px-3 py-2 border rounded"
         value={formData.email}
         onChange={handleChange}
         required
@@ -71,7 +70,7 @@ export default function ContactForm() {
       <textarea
         name="message"
         placeholder="Your Message"
-        className="w-full px-4 py-2 border rounded h-32"
+        className="w-full px-3 py-2 border rounded h-32"
         value={formData.message}
         onChange={handleChange}
         required
@@ -80,12 +79,11 @@ export default function ContactForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full py-3 rounded bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors"
+        className="w-full py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
       >
         Send Message
       </button>
 
-      {/* Status Message */}
       {status && <p className="mt-2 text-center text-sm">{status}</p>}
     </form>
   );

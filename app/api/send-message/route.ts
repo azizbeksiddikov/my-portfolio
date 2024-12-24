@@ -5,19 +5,14 @@ export async function POST(request: Request) {
     const { name, email, message } = await request.json();
     const content = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
 
-    // Telegram environment variables
-    const botToken = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
+    // Sanitize environment variables
+    const botToken = process.env.TELEGRAM_BOT_TOKEN?.replace(/["';]/g, "");
+    const chatId = process.env.TELEGRAM_CHAT_ID?.replace(/["';]/g, "");
 
-    // Make sure these are defined in .env.local or Vercel environment
     if (!botToken || !chatId) {
-      return NextResponse.json(
-        { status: "error", message: "Missing Telegram credentials" },
-        { status: 500 }
-      );
+      throw new Error("Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID");
     }
 
-    // Send message to Telegram
     const response = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
       {
@@ -30,14 +25,16 @@ export async function POST(request: Request) {
       }
     );
 
+    const responseData = await response.json();
+
     if (!response.ok) {
-      throw new Error(`Telegram API error: ${response.statusText}`);
+      console.error("Telegram API error:", responseData);
+      throw new Error(responseData.description || "Telegram API error");
     }
 
-    const data = await response.json();
-    return NextResponse.json({ status: "success", data });
+    return NextResponse.json({ status: "success", data: responseData });
   } catch (error: any) {
-    console.error("Error sending message:", error);
+    console.error("Error sending message:", error.message);
     return NextResponse.json(
       { status: "error", message: error.message },
       { status: 500 }

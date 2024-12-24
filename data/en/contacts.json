@@ -1,19 +1,19 @@
 {
   "contacts": [
     {
-      "name": "GitHub",
-      "link": "https://github.com/azizbeksiddikov",
-      "image": "/icons/github.svg"
+      "label": "GitHub",
+      "url": "https://github.com/azizbeksiddikov",
+      "icon": "/icons/github.svg"
     },
     {
-      "name": "LinkedIn",
-      "link": "https://www.linkedin.com/in/azzd/",
-      "image": "/icons/linkedin.svg"
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/azzd/",
+      "icon": "/icons/linkedin.svg"
     },
     {
-      "name": "Email",
-      "link": "mailto:azbeksid@gmail.com",
-      "image": "/icons/mail.svg"
+      "label": "Email",
+      "url": "mailto:azbeksid@gmail.com",
+      "icon": "/icons/mail.svg"
     }
   ]
 }
