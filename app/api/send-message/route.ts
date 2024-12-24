@@ -33,10 +33,16 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ status: "success", data: responseData });
-  } catch (error: any) {
-    console.error("Error sending message:", error.message);
+  } catch (error: unknown) {
+    console.error(
+      "Error sending message:",
+      error instanceof Error ? error.message : "Unknown error"
+    );
     return NextResponse.json(
-      { status: "error", message: error.message },
+      {
+        status: "error",
+        message: error instanceof Error ? error.message : "Unknown error",
+      },
       { status: 500 }
     );
   }
