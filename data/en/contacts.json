@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "name": "GitHub",
+      "link": "https://github.com/azizbeksiddikov",
+      "image": "/icons/github.svg"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/azzd/",
+      "image": "/icons/linkedin.svg"
+    },
+    {
+      "name": "Email",
+      "link": "mailto:azbeksid@gmail.com",
+      "image": "/icons/mail.svg"
+    }
+  ]
+}

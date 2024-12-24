@@ -1,0 +1,16 @@
+[
+  {
+    "company_name": "SISTECH CO., LTD.",
+    "position": "JUNIOR DATA ANALYST",
+    "place": "Seoul",
+    "start_date": "March 2024",
+    "finish_date": "August 2024",
+    "logo": "/images/sistech.jpeg",
+    "description": [
+      "Utilized Python for data manipulation and YOLOv8 modeling to detect road anomalies for autonomous inspection systems.",
+      "Trained on a custom-labeled dataset of 120,000+ images, achieving high accuracy and scalability in road anomaly detection.",
+      "Led a team of three data labelers, enhancing productivity and ensuring annotation accuracy.",
+      "Managed extensive datasets and delivered key insights and progress reports."
+    ]
+  }
+]

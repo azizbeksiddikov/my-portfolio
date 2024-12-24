@@ -1,0 +1,58 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Handwritten Digit Classification with TensorFlow",
+      "description": "This project demonstrates the classification of handwritten digits from the MNIST dataset using a Convolutional Neural Network (CNN) built with TensorFlow. The MNIST dataset consists of grayscale images of digits (0-9), each sized 28x28 pixels.",
+      "category": ["Machine Learning", "Computer Vision"],
+      "techStack": ["Python", "TensorFlow"],
+      "image": "images/tensor.jpeg",
+      "link": "https://github.com/azizbeksiddikov/Handwritten-Digit-Classification-with-TensorFlow"
+    },
+    {
+      "id": 2,
+      "image": "images/YOLO.svg",
+      "title": "Open Images vs COCO",
+      "description": "This project compares YOLO pretrained models on Open Images and COCO datasets, analyzing object detection performance qualitatively on images and videos.",
+      "category": ["Computer Vision", "Deep Learning"],
+      "techStack": ["Python", "YOLO", "OpenCV"],
+      "link": "https://github.com/azizbeksiddikov/Open-Images-vs-COCO"
+    },
+    {
+      "id": 3,
+      "image": "images/singapore.jpg",
+      "title": "Singapore HDB Resale Flat Prices (2017-2024)",
+      "description": "This project analyzes Singapore HDB resale prices (Jan 2017–Jun 2024), using data analysis and machine learning to uncover trends, key factors, and build predictive models for future prices.",
+      "category": ["Data Analysis", "Machine Learning"],
+      "techStack": ["Python", "Pandas", "Scikit-learn"],
+      "link": "https://github.com/azizbeksiddikov/Analysis_and_Prediction_Singapore_HDB_Resale_Flat_Price"
+    },
+    {
+      "id": 4,
+      "image": "images/ai_ml_jobs.png",
+      "title": "AI and ML Job Listings in the USA (2022-2024)",
+      "description": "Analysis of AI/ML job trends in the USA (2022–2024), covering trends, skills gaps, demand forecasting, top sectors, and recommendations for job seekers and employers.",
+      "category": ["Data Analysis", "AI Trends"],
+      "techStack": ["Python", "Tableau", "Excel"],
+      "link": "https://github.com/azizbeksiddikov/AI_ML_Job_Listings"
+    },
+    {
+      "id": 5,
+      "image": "images/sales.jpg",
+      "title": "Store Sales",
+      "description": "Sales Data Analysis of a Global Superstore (2014–2018): Trends, top-performing products, customer insights, geographical distribution, and shipping preferences to enhance business strategies and drive growth.",
+      "category": ["Data Analysis", "Business Intelligence"],
+      "techStack": ["Python", "Power BI", "SQL"],
+      "link": "https://github.com/azizbeksiddikov/Sales_Data_analysis"
+    },
+    {
+      "id": 6,
+      "image": "images/murder.jpg",
+      "title": "Murder Mystery",
+      "description": "Object Detection for License Plate Recognition: A computer vision project utilizing YOLO to detect and localize license plates in images or videos for automated processing and analysis.",
+      "category": ["Computer Vision", "Object Detection"],
+      "techStack": ["Python", "YOLO", "EasyOCR"],
+      "link": "https://github.com/azizbeksiddikov/SQL_Murder_Mystery/"
+    }
+  ]
+}
