@@ -1,13 +1,10 @@
-import fs from "fs";
-import path from "path";
 import Image from "next/image";
+import { getPageData, getLayoutData } from "@/lib/data";
 
-// This is a server component (no "use client"), so we can use fs + path.
 export default function ExperiencePage() {
-  // 1) Read JSON from the filesystem
-  const filePath = path.join(process.cwd(), "data", "en", "experiences.json");
-  const fileContents = fs.readFileSync(filePath, "utf-8");
-  const experiences = JSON.parse(fileContents) as Array<{
+  // 1. Read JSON files
+  const { experience } = getLayoutData("experiences");
+  const experiences = getPageData("experiences") as Array<{
     company_name: string;
     position: string;
     place: string;
@@ -18,52 +15,55 @@ export default function ExperiencePage() {
   }>;
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-main-background text-main-text">
       <div className="container mx-auto px-4 py-16">
         {/* Page Title */}
-        <h1 className="text-center text-4xl font-bold mb-12 text-gray-800">
-          Work Experience
+        <h1 className="text-center text-4xl font-bold mb-12 text-main-title">
+          {experience}
         </h1>
 
-        {/* If you have multiple experiences, map over them. 
-            If there's only one, it'll just render once. */}
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="bg-white p-8 rounded-lg shadow max-w-3xl mx-auto"
-          >
-            {/* Top: Company/Position + Logo on the right */}
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h2 className="text-xl font-semibold text-gray-700 mb-1">
-                  {exp.company_name} - {exp.position}
-                </h2>
-                <p className="text-blue-600">
-                  {exp.place} | {exp.start_date} - {exp.finish_date}
-                </p>
+        {/* Experiences */}
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="bg-main-sub-background p-8 rounded-lg shadow-lg max-w-4xl mx-auto"
+            >
+              {/* Header: Company, Position, Place, Logo */}
+              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-6 mr-24 ml-6">
+                {/* Header: Company, Position, Place */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-main-title mb-2">
+                    {exp.company_name}
+                  </h2>
+                  <p className="text-lg text-main-subtitle">{exp.position}</p>
+                  <p className="text-sm text-attention">
+                    {exp.place} | {exp.start_date} - {exp.finish_date}
+                  </p>
+                </div>
+
+                {/* Logo */}
+                {exp.logo && (
+                  <div className="w-24 h-24 relative mt-4 lg:mt-0">
+                    <Image
+                      src={exp.logo}
+                      alt={`${exp.company_name} logo`}
+                      fill
+                      className="object-contain rounded-md"
+                    />
+                  </div>
+                )}
               </div>
 
-              {/* Logo on the right (if present) */}
-              {exp.logo && (
-                <div className="w-16 h-16 relative ml-4">
-                  <Image
-                    src={exp.logo}
-                    alt={`${exp.company_name} logo`}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              )}
+              {/* Description */}
+              <ul className="list-disc list-inside space-y-3 pl-4 text-main-text">
+                {exp.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
-
-            {/* Bullet-Point Description */}
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              {exp.description.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
