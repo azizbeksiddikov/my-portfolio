@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   // 1. Read JSON file (e.g., data/en/overview.json)
-  const filePath = path.join(process.cwd(), "data", "en", "overview.json");
+  const filePath = path.join(process.cwd(), "data", "en", "home.json");
   const fileContents = fs.readFileSync(filePath, "utf-8");
   const { title, name, description, photo } = JSON.parse(fileContents);
 

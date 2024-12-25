@@ -2,7 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
-import { Contact } from "@/libs/types/contact";
+import { Contact } from "@/lib/types/contact";
 
 export default function ContactsPage() {
   const filePath = path.join(process.cwd(), "data", "en", "contacts.json");
