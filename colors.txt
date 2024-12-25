@@ -1,0 +1,24 @@
+Light Theme
+light_main_background: #EAF6F6 (Soft Cyan - gives a fresh, clean feel)
+light_main_sub_background: #D5F4F6 (Lighter Sky - subtle contrast on top of the background)
+light_main_title: #006D77 (Deep Teal - strong and attention-grabbing for titles)
+light_main_subtitle: #2C6975 (Muted Emerald - complementary for subtitles)
+light_main_text: #4A4A4A (Neutral Dark Gray - easy to read)
+light_sidebar_background: #C4E4E5 (Muted Cyan - slightly darker than the main background)
+light_sidebar_title: #005662 (Dark Teal - creates a strong emphasis)
+light_sidebar_subtitle: #337D83 (Teal Green - harmonious yet distinct)
+light_sidebar_text: #3D3D3D (Neutral Charcoal Gray - readable without being harsh)
+light_attention:  #A7D7D9 (Pale Sky Cyan)
+
+Dark Theme
+dark_main_background: #0E2A2F (Dark Teal Blue - provides depth and a calming mood)
+dark_main_sub_background: #16404A (Deep Emerald Blue - slight contrast on top of the background)
+dark_main_title: #53C4CC (Bright Cyan - pops against the dark background for titles)
+dark_main_subtitle: #46A0A5 (Bright Teal - softer but still vibrant for subtitles)
+dark_main_text: #BFD7D9 (Pale Cyan - readable without being overly bright)
+dark_sidebar_background: #092124 (Almost Black Teal - distinctly darker than the main background)
+dark_sidebar_title: #50BFC9 (Bright Sky Cyan - creates a clear emphasis)
+dark_sidebar_subtitle: #3D929B (Medium Teal - harmonizes with titles)
+dark_sidebar_text: #A8C3C5 (Soft Gray-Cyan - readable and consistent)
+dark_attention: #164D53
+
