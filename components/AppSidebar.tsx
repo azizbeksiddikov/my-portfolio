@@ -42,36 +42,36 @@ export function AppSidebar() {
     <div
       className={`h-screen ${
         isExpanded ? "w-64" : "w-20"
-      } bg-gray-800 text-gray-300 transition-all duration-250 flex flex-col`}
+      } bg-sidebar-background text-sidebar-text transition-all duration-200 flex flex-col`}
     >
       {/* Sidebar Header */}
       <div className="flex items-center justify-between px-4 py-3">
-        <button
-          tabIndex={0}
-          onClick={toggleSidebar}
-          className="flex items-center justify-center p-2 rounded-md hover:bg-gray-700"
-        >
-          {isExpanded ? (
-            <ChevronLeft className="h-5 w-5 text-gray-300" />
-          ) : (
-            <ChevronRight className="h-5 w-5 text-gray-300" />
-          )}
-        </button>
         {isExpanded && (
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="flex items-center justify-center p-2 rounded-md hover:bg-gray-700"
+            className="flex items-center justify-center p-2 rounded-md hover:bg-sidebar-subtitle"
             title={
               theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
             }
           >
             {theme === "dark" ? (
-              <Moon className="h-5 w-5 text-gray-300" />
+              <Moon className="h-5 w-5 text-sidebar-text" />
             ) : (
-              <Sun className="h-5 w-5 text-gray-300" />
+              <Sun className="h-5 w-5 text-sidebar-text" />
             )}
           </button>
         )}
+        <button
+          tabIndex={0}
+          onClick={toggleSidebar}
+          className="flex items-center justify-center p-2 rounded-md hover:bg-sidebar-subtitle"
+        >
+          {isExpanded ? (
+            <ChevronLeft className="h-5 w-5 text-sidebar-text" />
+          ) : (
+            <ChevronRight className="h-5 w-5 text-sidebar-text" />
+          )}
+        </button>
       </div>
 
       {/* Sidebar Navigation */}
@@ -86,9 +86,9 @@ export function AppSidebar() {
                   isExpanded ? "justify-start px-4" : "justify-center"
                 } w-11/12 h-12 rounded-lg ${
                   isActive
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-700 hover:bg-gray-600 text-gray-300"
-                } transition duration-200`}
+                    ? "bg-attention text-sidebar-text"
+                    : "bg-sidebar-background hover:bg-sidebar-subtitle text-sidebar-text"
+                } transition duration-150`}
               >
                 <item.icon className="h-6 w-6" />
                 {isExpanded && <span className="ml-2">{item.name}</span>}

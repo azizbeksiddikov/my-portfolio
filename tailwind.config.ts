@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
+  darkMode: ["class"], // Enable class-based dark mode
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -9,24 +9,31 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-  	extend: {
-  		colors: {
-  			'navbar-light': '#e0e7ff',
-  			'navbar-dark': '#1e1b4b',
-  			'content-light': '#f0f9ff',
-  			'content-dark': '#0f172a',
-  			sidebar: {
-  				DEFAULT: 'hsl(var(--sidebar-background))',
-  				foreground: 'hsl(var(--sidebar-foreground))',
-  				primary: 'hsl(var(--sidebar-primary))',
-  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  				accent: 'hsl(var(--sidebar-accent))',
-  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
-  			}
-  		}
-  	}
+    extend: {
+      colors: {
+        // Main Colors
+        main: {
+          background: "var(--main-background)",
+          subBackground: "var(--main-sub-background)",
+          title: "var(--main-title)",
+          subtitle: "var(--main-subtitle)",
+          text: "var(--main-text)",
+        },
+        // Sidebar Colors
+        sidebar: {
+          background: "var(--sidebar-background)",
+          title: "var(--sidebar-title)",
+          subtitle: "var(--sidebar-subtitle)",
+          text: "var(--sidebar-text)",
+        },
+        // Attention Color
+        attention: "var(--attention)",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        mono: ["Fira Code", "monospace"],
+      },
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 } satisfies Config;

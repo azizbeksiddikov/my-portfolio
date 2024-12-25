@@ -16,9 +16,31 @@ dark_main_sub_background: #16404A (Deep Emerald Blue - slight contrast on top of
 dark_main_title: #53C4CC (Bright Cyan - pops against the dark background for titles)
 dark_main_subtitle: #46A0A5 (Bright Teal - softer but still vibrant for subtitles)
 dark_main_text: #BFD7D9 (Pale Cyan - readable without being overly bright)
+
 dark_sidebar_background: #092124 (Almost Black Teal - distinctly darker than the main background)
 dark_sidebar_title: #50BFC9 (Bright Sky Cyan - creates a clear emphasis)
 dark_sidebar_subtitle: #3D929B (Medium Teal - harmonizes with titles)
 dark_sidebar_text: #A8C3C5 (Soft Gray-Cyan - readable and consistent)
 dark_attention: #164D53
 
+
+<div className="font-sans">
+  <h1 className="text-2xl">This uses the Inter font.</h1>
+</div>
+
+<div className="font-mono">
+  <p>This uses the Fira Code font for monospaced text.</p>
+</div>
+
+
+main-background
+main-sub-background
+main-title
+main-subtitle
+main-text
+
+  --sidebar-background: #c4e4e5;
+  --sidebar-title: #005662;
+  --sidebar-subtitle: #337d83;
+  --sidebar-text: #3d3d3d;
+ attention: #a7d7d9;

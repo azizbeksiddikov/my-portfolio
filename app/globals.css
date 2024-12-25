@@ -1,57 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900; /* Variable font range */
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Inter Italic";
+  src: url("/fonts/inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900; /* Variable font range */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/fira-code/FiraCode-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700; /* Variable font range */
+  font-style: normal;
+}
+
+:root {
+  /* Light Theme */
+  --main-background: #eaf6f6;
+  --main-sub-background: #d5f4f6;
+  --main-title: #006d77;
+  --main-subtitle: #2c6975;
+  --main-text: #4a4a4a;
+  --sidebar-background: #c4e4e5;
+  --sidebar-title: #005662;
+  --sidebar-subtitle: #337d83;
+  --sidebar-text: #3d3d3d;
+  --attention: #a7d7d9;
+}
+
+.dark {
+  /* Dark Theme */
+  --main-background: #0e2a2f;
+  --main-sub-background: #16404a;
+  --main-title: #53c4cc;
+  --main-subtitle: #46a0a5;
+  --main-text: #bfd7d9;
+  --sidebar-background: #092124;
+  --sidebar-title: #50bfc9;
+  --sidebar-subtitle: #3d929b;
+  --sidebar-text: #a8c3c5;
+  --attention: #164d53;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-main-background text-main-text;
 }
-@media (max-width: 768px) {
-  .flex-col {
-    display: flex;
-    flex-direction: column;
-  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-main-title;
 }
-/* @layer base {
-  :root {
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-  .dark {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-} */
-/* @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-} */
+
+p {
+  @apply text-main-subtitle;
+}
+
+.sidebar {
+  @apply bg-sidebar-background text-sidebar-text;
+}
