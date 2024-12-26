@@ -1,40 +1,25 @@
 import ContactForm from "@/components/ContactForm";
-import Image from "next/image";
+import SocialIcons from "@/components/SocialIcons";
 import { getPageData, getLayoutData } from "@/lib/data";
-import { Contact } from "@/lib/types/contact";
 
 export default function ContactsPage() {
   const { contacts } = getPageData("contacts");
   const contacts_layout = getLayoutData("contacts");
+
   return (
-    <div className="min-h-screen bg-main-background text-main-text flex flex-1 flex-col items-center justify-center gap-8">
+    <div className="min-h-screen bg-main-background text-main-text flex flex-1 flex-col items-center justify-center gap-4">
       {/* Page Title */}
       <h1 className="text-2xl font-bold text-main-title text-center mb-8">
         {contacts_layout.title}
       </h1>
 
-      {/* Social Media Icons */}
-      <div className="flex justify-center space-x-6 mb-8">
-        {contacts.map((item: Contact) => (
-          <a
-            key={item.label}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80"
-          >
-            <Image
-              src={item.icon}
-              alt={item.label}
-              width={36}
-              height={36}
-              className="rounded"
-            />
-          </a>
-        ))}
-      </div>
+      {/* Social Icons Component */}
+      <SocialIcons contacts={contacts} />
+
       {/* Contact Form */}
-      <ContactForm contacts_layout={contacts_layout} />
+      <div className="w-full max-w-md px-4">
+        <ContactForm contacts_layout={contacts_layout} />
+      </div>
     </div>
   );
 }
