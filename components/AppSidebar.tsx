@@ -40,7 +40,7 @@ export function AppSidebar() {
 
   return (
     <div
-      className={`h-screen ${
+      className={`h-screen  ${
         isExpanded ? "w-64" : "w-20"
       } bg-sidebar-background text-sidebar-text transition-all duration-200 flex flex-col`}
     >

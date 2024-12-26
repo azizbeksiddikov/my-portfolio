@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex bg-main-background text-main-text font-sans">
+      <body className="flex bg-main-background text-main-text font-sans overflow-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
