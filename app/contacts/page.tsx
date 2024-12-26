@@ -1,40 +1,42 @@
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
+import { getPageData, getLayoutData } from "@/lib/data";
 import { Contact } from "@/lib/types/contact";
 
 export default function ContactsPage() {
-  const filePath = path.join(process.cwd(), "data", "en", "contacts.json");
-  const fileData = fs.readFileSync(filePath, "utf-8");
-  const { contacts } = JSON.parse(fileData);
+  const { contacts } = getPageData("contacts");
+  const contacts_layout = getLayoutData("contacts");
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 text-gray-800">
-      <div className="max-w-md w-full p-4">
-        {/* ICONS (Server Rendered) */}
-        <div className="flex justify-center space-x-6 mb-8">
-          {contacts.map((item: Contact) => (
-            <a
-              key={item.label}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={item.icon}
-                alt={item.label}
-                width={32}
-                height={32}
-                className="hover:opacity-80"
-              />
-            </a>
-          ))}
-        </div>
+    <div className="min-h-screen bg-main-background text-main-text flex flex-1 flex-col items-center justify-center gap-8">
+      {/* Page Title */}
+      <h1 className="text-2xl font-bold text-main-title text-center mb-8">
+        {contacts_layout.title}
+      </h1>
 
-        {/* FORM (Client Rendered) */}
-        <ContactForm />
+      {/* Social Media Icons */}
+      <div className="flex justify-center space-x-6 mb-8">
+        {contacts.map((item: Contact) => (
+          <a
+            key={item.label}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80"
+          >
+            <Image
+              src={item.icon}
+              alt={item.label}
+              width={36}
+              height={36}
+              className="rounded"
+            />
+          </a>
+        ))}
       </div>
+
+      {/* Contact Form */}
+      <ContactForm contacts_layout={contacts_layout} />
     </div>
   );
 }
