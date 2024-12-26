@@ -7,7 +7,7 @@ export default function HomePage() {
   const { title, name, description, photo } = getPageData("home");
   const { contact, resume } = getLayoutData("home");
   return (
-    <div className="flex min-h-screen m-4 px-4 sm:px-8">
+    <div className="flex min-h-screen  px-4 sm:px-8">
       {/* LEFT COLUMN: Text Content */}
       <div className="flex flex-1 flex-col justify-center items-start space-y-8">
         <h1 className="text-4xl font-bold text-main-title">
