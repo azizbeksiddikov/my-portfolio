@@ -26,7 +26,7 @@ export default function ProjectsContainer({
       </div>
 
       {/* Project List */}
-      <div className="lg:w-1/3 p-8 bg-sidebar-background">
+      <div className="lg:w-1/3 h-screen bg-sidebar-background">
         <ProjectList
           projects={projects}
           selectedIndex={selectedIndex}

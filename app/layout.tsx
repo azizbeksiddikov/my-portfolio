@@ -25,7 +25,7 @@ export default function RootLayout({
           {/* Sidebar */}
           <AppSidebar />
           {/* Main Content */}
-          <main className="flex-1 min-h-screen p-4">{children}</main>
+          <main className="flex-1 min-h-screen">{children}</main>
         </ThemeProvider>
         {/* Analytics */}
         <Analytics />

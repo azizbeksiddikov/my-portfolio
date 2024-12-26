@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: "Inter";
   src: url("/fonts/inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
@@ -25,30 +26,50 @@
 
 :root {
   /* Light Theme */
-  --main-background: #eaf6f6;
-  --main-sub-background: #d5f4f6;
-  --main-title: #006d77;
-  --main-subtitle: #2c6975;
-  --main-text: #4a4a4a;
-  --sidebar-background: #c4e4e5;
-  --sidebar-title: #005662;
-  --sidebar-subtitle: #337d83;
-  --sidebar-text: #3d3d3d;
-  --attention: #a7d7d9;
+  --main-background: #f9f9f9;
+  --main-sub-background: #caf0f8;
+  --main-title: #1b262c;
+  --main-subtitle: #333333;
+  --main-text: #001f3d;
+  --main-resume: #10b981;
+  --attention: #0096c7;
+
+  --sidebar-background: #0096c7;
+  --sidebar-active: #b0e0e6;
+  --sidebar-hover: #e0f7fa;
+  --sidebar-title: #333333;
+  --sidebar-subtitle: #4a4a4a;
+  --sidebar-text: #333333;
+
+  --projects-category: theme("colors.gray.500");
+  --projects-cat_instance: theme("colors.gray.700");
+  --projects-text: theme("colors.blue.700");
+  --projects-tech: theme("colors.blue.50");
+  --projects-ring: theme("colors.blue.500");
 }
 
 .dark {
   /* Dark Theme */
-  --main-background: #0e2a2f;
-  --main-sub-background: #16404a;
-  --main-title: #53c4cc;
-  --main-subtitle: #46a0a5;
-  --main-text: #bfd7d9;
-  --sidebar-background: #092124;
-  --sidebar-title: #50bfc9;
-  --sidebar-subtitle: #3d929b;
-  --sidebar-text: #a8c3c5;
-  --attention: #164d53;
+  --main-background: #1a2b3b;
+  --main-sub-background: #234863;
+  --main-title: #e0e0e0;
+  --main-subtitle: #bdbdbd;
+  --main-text: #f0f0f0;
+  --main-resume: #059669;
+  --attention: #00b4d8;
+
+  --sidebar-background: #00728f;
+  --sidebar-active: #1e4d6b;
+  --sidebar-hover: #2c5a7a;
+  --sidebar-title: #e0e0e0;
+  --sidebar-subtitle: #bdbdbd;
+  --sidebar-text: #f0f0f0;
+
+  --projects-category: theme("colors.gray.400");
+  --projects-cat_instance: theme("colors.gray.300");
+  --projects-text: theme("colors.blue.300");
+  --projects-tech: theme("colors.blue.900");
+  --projects-ring: theme("colors.blue.600");
 }
 
 body {

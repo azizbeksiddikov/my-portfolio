@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Project, ProjectsLayout } from "@/lib/types/project";
+import { ExternalLink } from "lucide-react";
 
 export default function ProjectDetails({
   project,
@@ -43,42 +44,55 @@ export default function ProjectDetails({
       {/* Description */}
       <p className="text-lg text-main-text">{project.description}</p>
 
-      {/* Category */}
-      {project.category && (
-        <div className="text-sm text-main-subtitle ">
-          {projects_layout.category}: {project.category.join(", ")}
-        </div>
-      )}
+      {/* Details */}
+      <div className="grid gap-6 sm:grid-cols-2">
+        {/* Category */}
+        {project.category && (
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium text-projects-category">
+              {projects_layout.category}
+            </h2>
+            <div className="text-projects-cat_instance">
+              {project.category.join(", ")}
+            </div>
+          </div>
+        )}
 
-      {/* Tech Stack */}
-      {project.techStack?.length > 0 && (
-        <div>
-          <p className="text-sm text-main-subtitle mb-3">
-            {projects_layout.tech_stack}:
-          </p>
-          <ul className="flex flex-wrap gap-2">
-            {project.techStack.map((tech, i) => (
-              <li
-                key={i}
-                className="px-3 py-1 bg-main-sub-background text-sm rounded font-mono bg-sidebar-background"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        {/* Tech Stack */}
+        {project.techStack?.length > 0 && (
+          <div className="space-y-2">
+            <h2 className="text-sm font-medium text-projects-category">
+              {projects_layout.tech_stack}
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {project.techStack.map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 bg-projects-tech text-projects-text text-sm rounded-full font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
 
-      {/* More Info Button */}
+      {/* Project Link */}
       {project.link && (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-5 py-3 bg-attention rounded"
-        >
-          {projects_layout.more_info}
-        </a>
+        <div className="pt-4">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-projects-text text-main-background
+            rounded-lg font-medium transition-colors hover:bg-projects-text focus:outline-none focus:ring-2
+             focus:ring-projects-ring focus:ring-offset-2"
+          >
+            {projects_layout.more_info}
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        </div>
       )}
     </div>
   );

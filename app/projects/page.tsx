@@ -1,8 +1,8 @@
-import { getPageData, getLayoutData } from "@/lib/data";
+import { getProjectsSortedByPriority, getLayoutData } from "@/lib/data";
 import ProjectsContainer from "@/components/ProjectsContainer";
 
 export default function ProjectsPage() {
-  const projects = getPageData("projects").projects;
+  const projects = getProjectsSortedByPriority();
   const projects_layout = getLayoutData("projects");
 
   // 2. Render the container, passing the array

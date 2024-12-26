@@ -18,26 +18,26 @@ export default function ExperiencePage() {
     <div className="min-h-screen bg-main-background text-main-text">
       <div className="container mx-auto px-4 py-16">
         {/* Page Title */}
-        <h1 className="text-center text-4xl font-bold mb-12 text-main-title">
+        <h1 className="text-center  text-4xl font-bold mb-12 text-main-title">
           {experience}
         </h1>
 
         {/* Experiences */}
-        <div className="space-y-8">
+        <div className=" space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-main-sub-background p-8 rounded-lg shadow-lg max-w-4xl mx-auto"
+              className="bg-main-subBackground  p-8 rounded-lg shadow-lg max-w-4xl mx-auto"
             >
               {/* Header: Company, Position, Place, Logo */}
               <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-6 mr-24 ml-6">
                 {/* Header: Company, Position, Place */}
-                <div>
-                  <h2 className="text-2xl font-semibold text-main-title mb-2">
+                <div className="flex flex-1 flex-col gap-1.5">
+                  <h2 className="text-2xl font-semibold text-main-title">
                     {exp.company_name}
                   </h2>
                   <p className="text-lg text-main-subtitle">{exp.position}</p>
-                  <p className="text-sm text-attention">
+                  <p className="text-sm text-main-resume">
                     {exp.place} | {exp.start_date} - {exp.finish_date}
                   </p>
                 </div>

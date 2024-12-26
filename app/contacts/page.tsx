@@ -6,7 +6,6 @@ import { Contact } from "@/lib/types/contact";
 export default function ContactsPage() {
   const { contacts } = getPageData("contacts");
   const contacts_layout = getLayoutData("contacts");
-
   return (
     <div className="min-h-screen bg-main-background text-main-text flex flex-1 flex-col items-center justify-center gap-8">
       {/* Page Title */}
@@ -34,7 +33,6 @@ export default function ContactsPage() {
           </a>
         ))}
       </div>
-
       {/* Contact Form */}
       <ContactForm contacts_layout={contacts_layout} />
     </div>

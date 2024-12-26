@@ -86,8 +86,8 @@ export function AppSidebar() {
                   isExpanded ? "justify-start px-4" : "justify-center"
                 } w-11/12 h-12 rounded-lg ${
                   isActive
-                    ? "bg-attention text-sidebar-text"
-                    : "bg-sidebar-background hover:bg-sidebar-subtitle text-sidebar-text"
+                    ? "bg-sidebar-active text-sidebar-text"
+                    : "bg-sidebar-background hover:bg-sidebar-hover text-sidebar-text"
                 } transition duration-150`}
               >
                 <item.icon className="h-6 w-6" />
