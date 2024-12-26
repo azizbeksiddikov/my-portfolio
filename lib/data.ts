@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { Project, ProjectsLayout } from "@/lib/types/project";
+import { Project } from "@/lib/types/project";
 
 export function getPageData(page: string, lang: string = "en") {
   const filePath = path.join(process.cwd(), "data", lang, `${page}.json`);

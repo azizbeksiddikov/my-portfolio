@@ -1,6 +1,5 @@
 "use client";
 import { Project } from "@/lib/types/project";
-import { ChevronRight } from "lucide-react";
 
 interface ProjectListProps {
   projects: Project[];

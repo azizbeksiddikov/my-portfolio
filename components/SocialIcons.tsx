@@ -9,7 +9,7 @@ interface SocialIconsProps {
 }
 
 export default function SocialIcons({ contacts }: SocialIconsProps) {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   const iconComponents = {
     GitHub: Github,

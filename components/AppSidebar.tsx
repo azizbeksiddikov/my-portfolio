@@ -22,17 +22,31 @@ const navigation = [
 ];
 
 export function AppSidebar() {
-  const pathname = usePathname(); // Use directly in the render body
+  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
-  const [currentPath, setCurrentPath] = React.useState("");
 
   React.useEffect(() => {
-    setIsExpanded(true); // Expand sidebar by default after mount
+    if (window.innerWidth < 768) {
+      setIsExpanded(false); // Hide sidebar by default on small screens
+    } else {
+      setIsExpanded(true); // Show sidebar by default on larger screens
+    }
     setMounted(true); // Mark component as mounted for theme handling
-    setCurrentPath(pathname); // Safely fetch the current path
-  }, []);
+
+    // Add event listener to update state on window resize
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsExpanded(false);
+      } else {
+        setIsExpanded(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [pathname]);
 
   if (!mounted) return null;
 
