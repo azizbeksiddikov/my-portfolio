@@ -2,63 +2,88 @@
   "projects": [
     {
       "id": 1,
-      "priority": "1",
+      "priority": 1,
       "image": "/project_images/tensor.jpeg",
       "title": "Handwritten Digit Classification with TensorFlow",
-      "description": "This project demonstrates the classification of handwritten digits from the MNIST dataset using a Convolutional Neural Network (CNN) built with TensorFlow. The MNIST dataset consists of grayscale images of digits (0-9), each sized 28x28 pixels.",
+      "description": "This project classifies handwritten digits from the MNIST dataset using a Convolutional Neural Network (CNN) built with TensorFlow. The dataset consists of grayscale images of digits (0-9), each 28x28 pixels. The project includes data preprocessing, model training, and visualization of predictions. It showcases the effectiveness of CNNs in image classification tasks.",
       "category": ["Machine Learning", "Computer Vision"],
-      "techStack": ["Python", "TensorFlow"],
-      "link": "https://github.com/azizbeksiddikov/Handwritten-Digit-Classification-with-TensorFlow"
+      "techStack": ["Python", "TensorFlow", "NumPy", "Matplotlib"],
+      "link": "https://github.com/azizbeksiddikov/handwritten-digit-classification"
     },
     {
       "id": 2,
-      "priority": "1",
+      "priority": 1,
       "image": "/project_images/yolo.svg",
-      "title": "Open Images vs COCO",
-      "description": "This project compares YOLO pretrained models on Open Images and COCO datasets, analyzing object detection performance qualitatively on images and videos.",
-      "category": ["Computer Vision", "Deep Learning"],
-      "techStack": ["Python", "YOLO", "OpenCV"],
-      "link": "https://github.com/azizbeksiddikov/Open-Images-vs-COCO"
+      "title": "Open-Images vs COCO: YOLO Pretrained Models Analysis",
+      "description": "This project compares the performance of YOLO pretrained models on object detection tasks using the Open Images and COCO datasets. It evaluates the models' accuracy, speed, and efficiency across diverse scenarios, including image and video data. The analysis provides insights into the strengths, weaknesses, and dataset-specific challenges for YOLO models, using metrics such as inference speed, bounding box confidence, and temporal consistency.",
+      "category": ["Machine Learning", "Computer Vision", "Model Evaluation"],
+      "techStack": ["Python", "PyTorch", "YOLOv11", "OpenCV", "Matplotlib"],
+      "link": "https://github.com/azizbeksiddikov/open-images-vs-coco"
     },
     {
       "id": 3,
-      "priority": "0",
+      "priority": 0,
       "image": "/project_images/singapore.jpg",
-      "title": "Singapore HDB Resale Flat Prices (2017-2024)",
-      "description": "This project analyzes Singapore HDB resale prices (Jan 2017–Jun 2024), using data analysis and machine learning to uncover trends, key factors, and build predictive models for future prices.",
-      "category": ["Data Analysis", "Machine Learning"],
-      "techStack": ["Python", "Pandas", "Scikit-learn"],
-      "link": "https://github.com/azizbeksiddikov/Analysis_and_Prediction_Singapore_HDB_Resale_Flat_Price"
+      "title": "Singapore Resale Flat Prices (2017-2024)",
+      "description": "This project analyzes the resale prices of HDB flats in Singapore using data from 2017 to 2024. It includes exploratory data analysis, visualization, and the development of predictive models to estimate housing prices. Factors such as flat type, location, and lease details are examined to uncover trends and insights. Advanced regression models and neural networks are applied to predict prices, while geocoding enhances geographic analysis. The results provide actionable insights for stakeholders in the real estate market.",
+      "category": ["Data Analysis", "Machine Learning", "Geospatial Analysis"],
+      "techStack": [
+        "Python",
+        "Pandas",
+        "Scikit-learn",
+        "XGBoost",
+        "TensorFlow",
+        "Matplotlib",
+        "Seaborn",
+        "Tableau",
+        "Google Maps API",
+        "OneMap API"
+      ],
+      "link": "https://github.com/azizbeksiddikov/singapore-flat-resale"
     },
     {
       "id": 4,
-      "priority": "2",
+      "priority": 2,
       "image": "/project_images/ai_ml_jobs.png",
       "title": "AI and ML Job Listings in the USA (2022-2024)",
-      "description": "Analysis of AI/ML job trends in the USA (2022–2024), covering trends, skills gaps, demand forecasting, top sectors, and recommendations for job seekers and employers.",
-      "category": ["Data Analysis", "AI Trends"],
-      "techStack": ["Python", "Tableau", "Excel"],
-      "link": "https://github.com/azizbeksiddikov/AI_ML_Job_Listings"
+      "description": "This project analyzes AI and ML job listings in the USA from 2022 to 2024, providing insights into trends, sector demands, and skills gaps. It explores key patterns such as job distribution over time, sector-wise demand, experience levels, and contract types. The project also highlights skills like machine learning, Python, and data handling that are frequently required in job listings. Visualizations, including trend analysis and word clouds, reveal the growing demand for AI/ML professionals, especially in software development and IT sectors.",
+      "category": ["Data Analysis", "Job Market Analysis", "Visualization"],
+      "techStack": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Wordcloud",
+        "SQL"
+      ],
+      "link": "https://github.com/azizbeksiddikov/ai-ml-job-listing"
     },
     {
       "id": 5,
-      "priority": "2",
+      "priority": 2,
       "image": "/project_images/sales.jpg",
-      "title": "Store Sales",
-      "description": "Sales Data Analysis of a Global Superstore (2014–2018): Trends, top-performing products, customer insights, geographical distribution, and shipping preferences to enhance business strategies and drive growth.",
-      "category": ["Data Analysis", "Business Intelligence"],
-      "techStack": ["Python", "Power BI", "SQL"],
-      "link": "https://github.com/azizbeksiddikov/Sales_Data_analysis"
+      "title": "Sales Data Analysis",
+      "description": "This project analyzes retail sales data from a global superstore to identify trends, seasonal effects, and key performance indicators (KPIs). Using time series analysis, the project forecasts the sales of the next 7 days from the last available date in the training dataset. Key elements of the analysis include customer demographics, product categories, and sales patterns, helping to understand sales behavior and predict future trends in the retail sector.",
+      "category": ["Data Analysis", "Time Series", "Sales Forecasting"],
+      "techStack": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Statsmodels",
+        "Scikit-learn"
+      ],
+      "link": "https://github.com/azizbeksiddikov/sales-data-analysis"
     },
     {
       "id": 6,
-      "priority": "2",
+      "priority": 2,
       "image": "/project_images/murder.jpg",
-      "title": "Murder Mystery",
-      "description": "Object Detection for License Plate Recognition: A computer vision project utilizing YOLO to detect and localize license plates in images or videos for automated processing and analysis.",
-      "category": ["Computer Vision", "Object Detection"],
-      "techStack": ["Python", "YOLO", "EasyOCR"],
-      "link": "https://github.com/azizbeksiddikov/SQL_Murder_Mystery/"
+      "title": "SQL Murder Mystery Project",
+      "description": "This project uses SQL queries to solve a murder mystery by analyzing a database of crime scene reports, witness statements, suspects' details, and evidence. The analysis includes identifying suspects based on their gym membership, vehicle registration, and physical descriptions, along with gathering additional information from Facebook check-ins and income records. The final investigation uncovers the true culprit behind the crime, demonstrating advanced SQL skills such as JOINs, WHERE clauses, and data retrieval across multiple tables.",
+      "category": ["SQL", "Data Analysis", "Investigation"],
+      "techStack": ["SQL", "Kaggle Dataset", "Google Docs", "SQL Queries"],
+      "link": "https://github.com/azizbeksiddikov/sql-murder-mystery"
     }
   ]
 }
