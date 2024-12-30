@@ -26,7 +26,7 @@
       "image": "/project_images/singapore.jpg",
       "title": "Singapore Resale Flat Prices (2017-2024)",
       "description": "This project analyzes the resale prices of HDB flats in Singapore using data from 2017 to 2024. It includes exploratory data analysis, visualization, and the development of predictive models to estimate housing prices. Factors such as flat type, location, and lease details are examined to uncover trends and insights. Advanced regression models and neural networks are applied to predict prices, while geocoding enhances geographic analysis. The results provide actionable insights for stakeholders in the real estate market.",
-      "category": ["Data Analysis", "Machine Learning", "Geospatial Analysis"],
+      "category": ["Data Analysis", "Machine Learning"],
       "techStack": [
         "Python",
         "Pandas",
@@ -35,9 +35,7 @@
         "TensorFlow",
         "Matplotlib",
         "Seaborn",
-        "Tableau",
-        "Google Maps API",
-        "OneMap API"
+        "Tableau"
       ],
       "link": "https://github.com/azizbeksiddikov/singapore-flat-resale"
     },
