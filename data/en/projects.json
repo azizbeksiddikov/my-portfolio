@@ -84,6 +84,56 @@
       "category": ["SQL", "Data Analysis", "Investigation"],
       "techStack": ["SQL", "Kaggle Dataset", "Google Docs", "SQL Queries"],
       "link": "https://github.com/azizbeksiddikov/sql-murder-mystery"
+    },
+    {
+      "id": 7,
+      "priority": 0,
+      "image": "/project_images/color_detection.jpeg",
+      "title": "Real-Time Color Detection Using OpenCV",
+      "description": "A real-time color detection system that uses computer vision to identify and track custom color or predefined 16 standard web colors. The system processes webcam feed to detect objects of specific colors, with particularly robust detection of yellow objects. It features real-time object tracking, video recording capabilities, and optimized HSV color ranges for accurate detection.",
+
+      "category": ["Computer Vision", "Real-Time Processing"],
+      "techStack": ["Python", "OpenCV", "NumPy"],
+      "link": "https://github.com/azizbeksiddikov/color-detection"
+    },
+    {
+      "id": 8,
+      "priority": 2,
+      "image": "/project_images/compare-ocr.jpg",
+      "title": "Text Detection & OCR Comparison",
+      "description": "This project demonstrates the preprocessing of textual data from CSV, performing OCR with Tesseract and EasyOCR, and comparing their performance based on similarity scores and processing times. It includes instructions on setting up the environment, running the notebook, and evaluating results",
+
+      "category": [
+        "Computer Vision",
+        "OCR",
+        "Text Detection",
+        "Machine Learning"
+      ],
+      "techStack": [
+        "Python",
+        "Tesseract",
+        "EasyOCR",
+        "Jupyter Notebook",
+        "Pandas"
+      ],
+      "link": "https://github.com/azizbeksiddikov/compare-ocr"
+    },
+    {
+      "id": 9,
+      "priority": -1,
+      "image": "/project_images/plate-recognition.jpeg",
+      "title": "License Plate Recognition Project",
+      "description": "This project implements a robust license plate recognition system that processes video footage in real-time using advanced computer vision and machine learning techniques. It detects vehicles with YOLO (trained on the COCO dataset), tracks them using the SORT algorithm, and identifies license plates with a custom YOLO model. The plates are then decoded using EasyOCR, optimized for German license plate formats (e.g., 'CCNNCCC'). \nThe system outputs annotated videos and structured CSV files containing details like vehicle IDs, license plate text, confidence scores, timestamps, and vehicle types. Designed for traffic monitoring, automated tolls, and parking systems, it delivers high accuracy and scalability with a modular architecture and reusable components. ",
+
+      "category": [
+        "Computer Vision",
+        "OCR",
+        "Deep Learning",
+        "Video Processing",
+        "License Plate Recognition (LPR/ALPR)"
+      ],
+      "techStack": ["Python", "YOLO", "EasyOCR", "OpenCV", "SORT", "Pandas"],
+      "link": "https://github.com/azizbeksiddikov/plate-recognition"
     }
   ]
 }
