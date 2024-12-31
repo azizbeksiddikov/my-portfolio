@@ -120,7 +120,7 @@
       "id": 9,
       "priority": -1,
       "image": "/project_images/plate-recognition.jpeg",
-      "title": "License Plate Recognition Project",
+      "title": "License Plate Recognition",
       "description": "This project implements a robust license plate recognition system that processes video footage in real-time using advanced computer vision and machine learning techniques. It detects vehicles with YOLO (trained on the COCO dataset), tracks them using the SORT algorithm, and identifies license plates with a custom YOLO model. The plates are then decoded using EasyOCR, optimized for German license plate formats (e.g., 'CCNNCCC'). \nThe system outputs annotated videos and structured CSV files containing details like vehicle IDs, license plate text, confidence scores, timestamps, and vehicle types. Designed for traffic monitoring, automated tolls, and parking systems, it delivers high accuracy and scalability with a modular architecture and reusable components. ",
 
       "category": [
