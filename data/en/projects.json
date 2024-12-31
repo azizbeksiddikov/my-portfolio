@@ -131,7 +131,7 @@
         "License Plate Recognition (LPR/ALPR)"
       ],
       "techStack": ["Python", "YOLO", "EasyOCR", "OpenCV", "SORT", "Pandas"],
-      "link": "https://github.com/azizbeksiddikov/plate-recognition"
+      "link": "https://github.com/azizbeksiddikov/plates-recognition"
     }
   ]
 }
