@@ -13,7 +13,7 @@
     {
       "id": 2,
       "priority": 1,
-      "image": "/project_images/yolo.svg",
+      "image": "/project_images/YOLO.svg",
       "title": "Open-Images vs COCO: YOLO Pretrained Models Analysis",
       "description": "This project compares the performance of YOLO pretrained models on object detection tasks using the Open Images and COCO datasets. It evaluates the models' accuracy, speed, and efficiency across diverse scenarios, including image and video data. The analysis provides insights into the strengths, weaknesses, and dataset-specific challenges for YOLO models, using metrics such as inference speed, bounding box confidence, and temporal consistency.",
       "category": ["Machine Learning", "Computer Vision", "Model Evaluation"],
